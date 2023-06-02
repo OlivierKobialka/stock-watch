@@ -1,35 +1,53 @@
-import { StyleSheet } from "react-native";
+import { Pressable, ScrollView, StyleSheet } from "react-native";
 
-import EditScreenInfo from "../../components/EditScreenInfo";
 import { Text, View } from "../../components/Themed";
 
 export default function MenuScreen() {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Menu</Text>
-			<View
-				style={styles.separator}
-				lightColor='#eee'
-				darkColor='rgba(255,255,255,0.1)'
-			/>
-			<EditScreenInfo path='app/(tabs)/menu.tsx' />
+			<ScrollView>
+				<Text>Menu</Text>
+				<View style={styles.mainBox}>
+					<View>
+						<Pressable style={styles.box}>
+							<Text>123</Text>
+						</Pressable>
+					</View>
+					<View style={styles.secondBox}>
+						<Pressable style={styles.box}>
+							<Text>123</Text>
+						</Pressable>
+						<Pressable style={styles.box}>
+							<Text>123</Text>
+						</Pressable>
+					</View>
+				</View>
+			</ScrollView>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		alignItems: "center",
+		width: "100%",
+		height: "100%",
+		padding: 15,
+	},
+	mainBox: {
+		display: "flex",
+		flexDirection: "column",
+		width: "100%",
 		justifyContent: "center",
+		alignItems: "center",
 	},
-	title: {
-		fontSize: 20,
-		fontWeight: "bold",
+	secondBox: {
+		display: "flex",
+		flexDirection: "row",
+		width: "full",
 	},
-	separator: {
-		marginVertical: 30,
-		height: 1,
-		width: "80%",
+	box: {
+		backgroundColor: "#fde",
+		width: "full",
+		borderRadius: 15,
 	},
 });
