@@ -12,10 +12,19 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Text, View } from "../../components/Themed";
 import React, { useCallback, useState } from "react";
 import { Menu, Colors } from "../../constants";
+// import Themed from "../../components/Themed";
 
 export default function ChartScreen() {
     const colorScheme = useColorScheme();
     const [SwithcValue, setSwitchValue] = useState(false);
+
+    const handleColorSchemeChange = useCallback(() => {
+        setSwitchValue(!SwithcValue);
+        // const newColorScheme = SwithcValue ? "dark" : "light";
+        // // Use the newColorScheme directly to update the color scheme
+        // // You might have a separate method to handle this update, let's assume it's called updateColorScheme
+        // updateColorScheme(newColorScheme);
+    }, [SwithcValue]);
 
     const repoLink: string = "https://github.com/OlivierKobialka/stock-watch";
 
@@ -76,9 +85,7 @@ export default function ChartScreen() {
                                     ],
                                 }}
                                 value={SwithcValue}
-                                onValueChange={() =>
-                                    setSwitchValue(!SwithcValue)
-                                }
+                                onValueChange={handleColorSchemeChange}
                                 ios_backgroundColor={"#F2F2F7"}
                                 trackColor={{
                                     false: "#F2F2F7",
