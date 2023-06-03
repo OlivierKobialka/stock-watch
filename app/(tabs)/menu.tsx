@@ -24,8 +24,7 @@ export default function ChartScreen() {
     };
 
     return (
-        <View style={Menu.container}>
-            <Text style={Menu.title}>Menu</Text>
+        <View lightColor="#fff" darkColor="#000" style={Menu.container}>
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={Menu.scrollView}
