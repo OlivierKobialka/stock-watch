@@ -29,7 +29,7 @@ export default function TabLayout() {
         {
             name: "menu",
             title: "Menu",
-            icon: "user",
+            icon: "navicon",
         },
     ];
 
