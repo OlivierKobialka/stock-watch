@@ -44,7 +44,11 @@ export default function ChartScreen() {
                         <Text>Rate us</Text>
                     </Pressable>
                 </View>
-                {/* divider */}
+                <View
+                    style={styles.separator}
+                    lightColor="#eee"
+                    darkColor="rgba(255,255,255,0.1)"
+                />
                 <View>
                     <Pressable>
                         <Text>We're on scial media</Text>
