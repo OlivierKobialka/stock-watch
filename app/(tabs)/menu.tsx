@@ -45,7 +45,7 @@ export default function ChartScreen() {
                     </View>
                     <View style={styles.boxContainer}>
                         <TouchableOpacity style={styles.smallBox}>
-                            <FontAwesome name="commenting-o" size={25} />
+                            <FontAwesome name="send-o" size={25} />
 
                             <Text style={styles.text}>chats</Text>
                         </TouchableOpacity>
