@@ -39,6 +39,25 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
     const colorScheme = useColorScheme();
+    const modals = [
+        { name: "(tabs)", options: { headerShown: false } },
+        {
+            name: "modal",
+            options: { presentation: "modal", headerShown: false },
+        },
+        {
+            name: "socials",
+            options: { presentation: "modal", headerShown: false },
+        },
+        {
+            name: "about",
+            options: { presentation: "modal", headerShown: false },
+        },
+        {
+            name: "settings",
+            options: { presentation: "modal", headerShown: false },
+        },
+    ];
 
     return (
         <>
@@ -46,22 +65,13 @@ function RootLayoutNav() {
                 value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
             >
                 <Stack>
-                    <Stack.Screen
-                        name="(tabs)"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="modal"
-                        options={{ presentation: "modal" }}
-                    />
-                    <Stack.Screen
-                        name="socials"
-                        options={{ presentation: "modal", headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="about"
-                        options={{ presentation: "modal", headerShown: false }}
-                    />
+                    {modals.map((modal) => (
+                        <Stack.Screen
+                            key={modal.name}
+                            name={modal.name}
+                            options={modal.options}
+                        />
+                    ))}
                 </Stack>
             </ThemeProvider>
         </>

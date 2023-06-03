@@ -2,9 +2,11 @@ import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import { Text, View } from "../components/Themed";
 import React from "react";
 import { Link } from "expo-router";
-import { weOnSocals } from "../constants";
+import { weOnSocals, Colors } from "../constants";
+import { useColorScheme } from "react-native";
 
 export default function SocialMedia() {
+    const colorScheme = useColorScheme();
     const socials = [
         {
             name: "Twitter",
@@ -64,7 +66,7 @@ export default function SocialMedia() {
                         <Link href={social.url} target="_blank">
                             <FontAwesome
                                 name="angle-right"
-                                color="#E5E5EA"
+                                color={Colors[colorScheme ?? "light"].text}
                                 size={20}
                             />
                         </Link>

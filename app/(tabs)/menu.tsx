@@ -62,13 +62,25 @@ export default function ChartScreen() {
                     </View>
                     <View style={Menu.boxContainer}>
                         <TouchableOpacity style={Menu.smallBox}>
-                            <FontAwesome name="comments" size={25} />
+                            <FontAwesome
+                                color={Colors[colorScheme ?? "light"].text}
+                                name="comments"
+                                size={25}
+                            />
 
                             <Text style={Menu.text}>chats</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={Menu.smallBox}>
-                            <FontAwesome name="cog" size={25} />
-                            <Text style={Menu.text}>settings</Text>
+                            <Link href="../settings">
+                                <FontAwesome
+                                    color={Colors[colorScheme ?? "light"].text}
+                                    name="cog"
+                                    size={25}
+                                />
+                            </Link>
+                            <Link href="../settings">
+                                <Text style={Menu.text}>settings</Text>
+                            </Link>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -153,7 +165,7 @@ export default function ChartScreen() {
                     </TouchableOpacity>
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                        name="sticky-note"
+                            name="sticky-note"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -238,7 +250,11 @@ export default function ChartScreen() {
                         style={Menu.viewBox}
                         onPress={handleLinkPress}
                     >
-                        <FontAwesome name="github" size={25} />
+                        <FontAwesome
+                            color={Colors[colorScheme ?? "light"].text}
+                            name="github"
+                            size={25}
+                        />
                         <View style={Menu.rectangle}>
                             <Text style={Menu.text}>Chek out Github repo</Text>
                         </View>

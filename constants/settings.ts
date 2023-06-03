@@ -1,0 +1,67 @@
+export default {
+    container: {
+        display: "flex",
+        padding: 10,
+        height: "100%",
+    },
+    title: {
+        fontSize: 32,
+        fontWeight: "bold",
+        marginBottom: 20,
+    },
+    subtext: {
+        fontSize: 15,
+        marginTop: 10,
+        color: "#8E8E93",
+    },
+    box: {
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        height: 50,
+    },
+    text: {
+        fontSize: 16,
+        fontWeight: "400",
+        borderBottomColor: "#F2F2F7",
+        borderBottomWidth: 1,
+    },
+    rectangle: {
+        display: "flex",
+        flexDirection: "row",
+        width: "84%",
+        marginLeft: 15,
+        height: 50,
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderBottomColor: "#F2F2F7",
+        borderBottomWidth: 1,
+    },
+    list: {
+        marginTop: 40,
+    },
+    listLast: {
+        marginTop: 40,
+        marginBottom: 100,
+    },
+    rectangleD: {
+        display: "flex",
+        flexDirection: "row",
+        width: "84%",
+        marginLeft: 15,
+        height: 50,
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderBottomColor: "#FF3B30",
+        borderBottomWidth: 1,
+    },
+    textD: {
+        fontSize: 16,
+        fontWeight: "400",
+        borderBottomColor: "#FF3B30",
+        color: "#FF3B30",
+        borderBottomWidth: 1,
+    },
+};
