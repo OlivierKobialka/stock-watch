@@ -56,22 +56,22 @@ export default function SocialMedia() {
             <Text style={styles.title}>We are on socials...</Text>
             {socials.map((social) => (
                 <View style={styles.box} key={social.name}>
-                    <Link
-                        style={{ width: "100%" }}
-                        href={social.url}
-                        target="_blank"
-                    >
-                        <FontAwesome name={social.icon} size={24} />
-                        <View style={styles.rectangle}>
-                            <Text>{social.name}</Text>
+                    <Link href={social.url} target="_blank">
+                        <FontAwesome name={social.icon} size={24} />{" "}
+                    </Link>
 
+                    <View style={styles.rectangle}>
+                        <Link href={social.url} target="_blank">
+                            <Text>{social.name}</Text>
+                        </Link>
+                        <Link href={social.url} target="_blank">
                             <FontAwesome
                                 name="angle-right"
                                 color="#E5E5EA"
                                 size={20}
                             />
-                        </View>
-                    </Link>
+                        </Link>
+                    </View>
                 </View>
             ))}
         </View>
