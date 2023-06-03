@@ -7,7 +7,7 @@ import React from 'react';
 export default function WatchlistScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Watchlist</Text>
+      <Text className="text-red-500">Watchlist</Text>
     </View>
   );
 }
