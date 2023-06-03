@@ -8,7 +8,7 @@ import {
     TouchableOpacity,
     useColorScheme,
 } from "react-native";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import { Text, View } from "../../components/Themed";
 import React, { useCallback, useState } from "react";
 import { Menu, Colors } from "../../constants";
@@ -51,7 +51,7 @@ export default function ChartScreen() {
                         style={Menu.user}
                     >
                         <FontAwesome
-                            name="user-circle-o"
+                            name="user-circle"
                             color={Colors[colorScheme ?? "light"].text}
                             size={45}
                             style={{
@@ -62,7 +62,7 @@ export default function ChartScreen() {
                     </View>
                     <View style={Menu.boxContainer}>
                         <TouchableOpacity style={Menu.smallBox}>
-                            <FontAwesome name="send-o" size={25} />
+                            <FontAwesome name="comments" size={25} />
 
                             <Text style={Menu.text}>chats</Text>
                         </TouchableOpacity>
@@ -76,7 +76,7 @@ export default function ChartScreen() {
                 <View>
                     <View style={Menu.viewBox}>
                         <FontAwesome
-                            name="moon-o"
+                            name="moon"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -103,7 +103,7 @@ export default function ChartScreen() {
                     </View>
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                            name="share-square-o"
+                            name="share-square"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -114,7 +114,7 @@ export default function ChartScreen() {
 
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                            name="comment-o"
+                            name="star"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -153,7 +153,7 @@ export default function ChartScreen() {
                     </TouchableOpacity>
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                            name="sticky-note-o"
+                        name="sticky-note"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -167,13 +167,17 @@ export default function ChartScreen() {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={Menu.viewBox}>
-                        <FontAwesome
-                            name="info"
-                            color={Colors[colorScheme ?? "light"].text}
-                            size={25}
-                        />
+                        <Link href="../about">
+                            <FontAwesome
+                                name="info"
+                                color={Colors[colorScheme ?? "light"].text}
+                                size={25}
+                            />
+                        </Link>
                         <View style={Menu.rectangle}>
-                            <Text style={Menu.text}>About</Text>
+                            <Link href="../about">
+                                <Text style={Menu.text}>About</Text>
+                            </Link>
                             <FontAwesome
                                 name="angle-right"
                                 color="#E5E5EA"
@@ -190,7 +194,7 @@ export default function ChartScreen() {
                 >
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                            name="question-circle-o"
+                            name="question-circle"
                             color={Colors[colorScheme ?? "light"].text}
                             size={25}
                         />
@@ -207,7 +211,7 @@ export default function ChartScreen() {
                 >
                     <TouchableOpacity style={Menu.viewBox}>
                         <FontAwesome
-                            name="sign-out"
+                            name="sign-out-alt"
                             color="#FF3B30"
                             size={25}
                         />

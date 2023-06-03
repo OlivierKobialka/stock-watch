@@ -1,8 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { Platform, StyleSheet } from "react-native";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-
-import EditScreenInfo from "../components/EditScreenInfo";
+import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import { Text, View } from "../components/Themed";
 import React from "react";
 import { Link } from "expo-router";
@@ -18,7 +14,7 @@ export default function SocialMedia() {
         {
             name: "TradingView",
             url: "https://www.tradingview.com/u/Expo/",
-            icon: "telegram",
+            icon: "ethereum",
         },
         {
             name: "YouTube",
@@ -43,12 +39,12 @@ export default function SocialMedia() {
         {
             name: "TikTok",
             url: "https://www.tiktok.com/@expo",
-            icon: "telegram",
+            icon: "tiktok",
         },
         {
             name: "Discord",
             url: "https://discord.gg/4gtbB6P",
-            icon: "telegram",
+            icon: "discord",
         },
     ];
 
@@ -58,7 +54,7 @@ export default function SocialMedia() {
             {socials.map((social) => (
                 <View style={weOnSocals.box} key={social.name}>
                     <Link href={social.url} target="_blank">
-                        <FontAwesome name={social.icon} size={24} />{" "}
+                        <FontAwesome name={social.icon} size={24} />
                     </Link>
 
                     <View style={weOnSocals.rectangle}>
