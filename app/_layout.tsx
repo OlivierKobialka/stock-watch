@@ -54,6 +54,10 @@ function RootLayoutNav() {
                         name="modal"
                         options={{ presentation: "modal" }}
                     />
+                    <Stack.Screen
+                        name="socials"
+                        options={{ presentation: "modal", headerShown: false }}
+                    />
                 </Stack>
             </ThemeProvider>
         </>

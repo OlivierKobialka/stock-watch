@@ -12,6 +12,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Text, View } from "../../components/Themed";
 import React, { useCallback, useState } from "react";
 import { Menu, Colors } from "../../constants";
+import { Link } from "expo-router";
 // import Themed from "../../components/Themed";
 
 export default function ChartScreen() {
@@ -26,10 +27,14 @@ export default function ChartScreen() {
         // updateColorScheme(newColorScheme);
     }, [SwithcValue]);
 
-    const repoLink: string = "https://github.com/OlivierKobialka/stock-watch";
-
     const handleLinkPress = () => {
+        const repoLink: string =
+            "https://github.com/OlivierKobialka/stock-watch";
         Linking.openURL(repoLink);
+    };
+    const handleOnSocialMediaPress = () => {
+        const socialMediaLink: string = "../modal";
+        Linking.openURL(socialMediaLink);
     };
 
     return (
@@ -125,13 +130,20 @@ export default function ChartScreen() {
                     }}
                 >
                     <TouchableOpacity style={Menu.viewBox}>
-                        <FontAwesome
-                            name="at"
-                            color={Colors[colorScheme ?? "light"].text}
-                            size={25}
-                        />
+                        <Link href="../modal">
+                            <FontAwesome
+                                name="at"
+                                color={Colors[colorScheme ?? "light"].text}
+                                size={25}
+                            />
+                        </Link>
                         <View style={Menu.rectangle}>
-                            <Text style={Menu.text}>We're on social media</Text>
+                            <Link href="../socials">
+                                <Text style={Menu.text}>
+                                    We're on social media
+                                </Text>
+                            </Link>
+
                             <FontAwesome
                                 name="angle-right"
                                 color="#E5E5EA"
