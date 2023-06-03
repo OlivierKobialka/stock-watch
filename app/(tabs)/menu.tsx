@@ -214,9 +214,7 @@ export default function ChartScreen() {
                     >
                         <FontAwesome name="github" size={25} />
                         <View style={Menu.rectangle}>
-                            <Text style={Menu.text}>
-                                Chek out Github repo
-                            </Text>
+                            <Text style={Menu.text}>Chek out Github repo</Text>
                         </View>
                     </TouchableOpacity>
                 </View>

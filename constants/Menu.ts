@@ -6,7 +6,7 @@ export default {
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        padding: 20,
+        padding: 10,
     },
     scrollView: {
         width: "100%",
