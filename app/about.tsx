@@ -6,23 +6,28 @@ import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import React from "react";
 import { Link } from "expo-router";
-import { weOnSocals } from "../constants";
+import { about } from "../constants";
 
 export default function SocialMedia() {
-    return <View style={s.container}>
-        <Text style={s.title}>About</Text>
-    </View>;
-}
+    const items = [
+        { name: "House rules" },
+        { name: "Privacy policy" },
+        { name: "Terms of use" },
+        { name: "Cookie policy" },
+        { name: "Third party sounds" },
+    ];
 
-const s = StyleSheet.create({
-    container: {
-        height: "100%",
-        display: "flex",
-        padding: 20,
-    },
-    title: {
-        fontSize: 32,
-        fontWeight: "bold",
-        marginBottom: 20,
-    },
-});
+    return (
+        <View style={about.container}>
+            <Text style={about.title}>About</Text>
+            <Text style={about.version}>Version 2.64.0 build 742</Text>
+            <View style={about.list}>
+                {items.map((item) => (
+                    <View style={about.box} key={item.name}>
+                        <Text style={about.text}>{item.name}</Text>
+                    </View>
+                ))}
+            </View>
+        </View>
+    );
+}
