@@ -1,4 +1,5 @@
 const userBgColor = "#edf2f7";
+const borderColor = "#F2F2F7";
 
 export default {
     container: {
@@ -37,7 +38,7 @@ export default {
         height: 50,
         justifyContent: "space-between",
         alignItems: "center",
-        borderBottomColor: userBgColor,
+        borderBottomColor: borderColor,
         borderBottomWidth: 1,
     },
     text: {

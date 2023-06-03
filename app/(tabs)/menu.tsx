@@ -24,14 +24,18 @@ export default function ChartScreen() {
     };
 
     return (
-        <View lightColor="#fff" darkColor="#000" style={Menu.container}>
+        <View style={Menu.container}>
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={Menu.scrollView}
             >
                 {/*  */}
                 <View style={Menu.topInfo}>
-                    <View style={Menu.user}>
+                    <View
+                        lightColor="#edf2f7"
+                        darkColor="#3634A3"
+                        style={Menu.user}
+                    >
                         <FontAwesome
                             name="user-circle-o"
                             color={Colors[colorScheme ?? "light"].text}
