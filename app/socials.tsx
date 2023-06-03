@@ -6,6 +6,7 @@ import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import React from "react";
 import { Link } from "expo-router";
+import { weOnSocals } from "../constants";
 
 export default function SocialMedia() {
     const socials = [
@@ -52,15 +53,15 @@ export default function SocialMedia() {
     ];
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>We are on socials...</Text>
+        <View style={weOnSocals.container}>
+            <Text style={weOnSocals.title}>We're on socials...</Text>
             {socials.map((social) => (
-                <View style={styles.box} key={social.name}>
+                <View style={weOnSocals.box} key={social.name}>
                     <Link href={social.url} target="_blank">
                         <FontAwesome name={social.icon} size={24} />{" "}
                     </Link>
 
-                    <View style={styles.rectangle}>
+                    <View style={weOnSocals.rectangle}>
                         <Link href={social.url} target="_blank">
                             <Text>{social.name}</Text>
                         </Link>
@@ -77,32 +78,3 @@ export default function SocialMedia() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        padding: 10,
-    },
-    title: {
-        fontSize: 30,
-        fontWeight: "bold",
-    },
-    box: {
-        display: "flex",
-        flexDirection: "row",
-        width: "100%",
-        justifyContent: "space-between",
-        alignItems: "center",
-        height: 50,
-    },
-    rectangle: {
-        display: "flex",
-        flexDirection: "row",
-        width: "87%",
-        height: 50,
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderBottomColor: "#F2F2F7",
-        borderBottomWidth: 1,
-    },
-});
